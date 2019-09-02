@@ -5,24 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Underlords Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style href="main.css"></style>
+    <link rel="stylesheet" href="css/circle.css">
 </head>
 <body>
-    <label for="in1">Current Level: </label>
-    <input id="in1" type="number" min="1" max="9" value="1"/>
-    <br>
-    <label for="in2">Target Level: </label>
-    <input id="in2" type="number" min="2" max="10" value="10"/>
-    <br>
-    <label for="in3">XP: </label>
-    <input id="in3" type="number" min="0" max="40" value="0"/>
-    <br>
+    <div class="container">
+        <h1> Underlords Calculator</h1>
 
-    <p id="cur_xp">     0 XP</p>
-    <p id="xp_result">  0 XP</p>
-    <p id="gold_result">0 Gold</p>
+        <h3>Gold Required</h3>
+        <label for="in1">Current Level: </label>
+        <input id="in1" type="number" min="1" max="9" value="1"/>
+        <br>
+        <label for="in2">Target Level: </label>
+        <input id="in2" type="number" min="2" max="10" value="10"/>
+        <br>
+        <label for="in3">XP: </label>
+        <input id="in3" type="number" min="0" max="40" value="0"/>
+        <br>
+
+        <p id="cur_xp">Cur XP: 0</p>
+        <p id="xp_result">1 -> 10 = 128 XP</p>
+        <p id="gold_result">1 -> 10 = 160 Gold</p>
+
+        <h3>Gold to XP</h3>
+        
+        <label for="in4">Cur Gold: </label>
+        <input id="in4" type="number" min="0" max="100" value="0"/>
+        <br>
+
+        <p id="xp_from_gold_result">0 xp is able to be bought with 0 Gold</p>
+
+        <div id="circ" class="c100 big">
+            <span id="lev">1</span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
