@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Underlords Calculator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style href="main.css"></style>
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="css/circle.css">
 </head>
 <body>
@@ -14,25 +14,45 @@
         <h1> Underlords Calculator</h1>
 
         <h3>Gold Required</h3>
-        <label for="in1">Current Level: </label>
-        <input id="in1" type="number" min="1" max="9" value="1"/>
-        <br>
-        <label for="in2">Target Level: </label>
-        <input id="in2" type="number" min="2" max="10" value="10"/>
-        <br>
-        <label for="in3">XP: </label>
-        <input id="in3" type="number" min="0" max="40" value="0"/>
-        <br>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Current Level</span>
+            </div>
+            <div class="col-xs-2">
+                <input id="in1" type="number" type="number" min="1" max="9" value="1" class="form-control rounded-0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Target Level</span>
+            </div>
+            <div class="col-xs-2">
+                <input id="in2" type="number" min="2" max="10" value="10" class="form-control rounded-0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">XP</span>
+            </div>
+            <div class="col-xs-2">
+                    <input id="in3" type="number" min="0" max="40" value="0" class="form-control rounded-0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
 
         <p id="cur_xp">Cur XP: 0</p>
         <p id="xp_result">1 -> 10 = 128 XP</p>
         <p id="gold_result">1 -> 10 = 160 Gold</p>
 
         <h3>Gold to XP</h3>
-        
-        <label for="in4">Cur Gold: </label>
-        <input id="in4" type="number" min="0" max="100" value="0"/>
-        <br>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Cur Gold</span>
+            </div>
+            <div class="col-xs-2">
+                <input id="in4" type="number" min="0" max="100" value="0" class="form-control rounded-0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
 
         <p id="xp_from_gold_result">0 xp is able to be bought with 0 Gold</p>
 
